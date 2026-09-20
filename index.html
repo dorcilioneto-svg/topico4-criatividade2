@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Atividade 4.2 — Apresentação de artigo sobre Criatividade.">
+<title>Além das Telas — Criatividade, Tecnologia e Educação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--font-title:'Outfit',sans-serif;--font-body:'Inter',sans-serif;--red:#9B2305;--orange:#CF6F0A;--brown:#581F08;--black:#000;--light:#F5F5F5;--glass:rgba(88,31,8,.78);--line:rgba(207,111,10,.45);--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--font-body);color:var(--light);background:#000;line-height:1.75;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.91)),url("https://raw.githubusercontent.com/GlauberLASantiago/gl-cores-fontes-e-fundos/main/tecnologia/11_realista_placa_mae_componentes_pc.png") center/cover fixed no-repeat}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(155,35,5,.22),transparent 42%)}
+a{color:inherit}h1,h2,h3,h4{font-family:var(--font-title);line-height:1.12}p,span,a,button{font-family:var(--font-body)}
+.container{width:min(92%,var(--max));margin:auto}
+.nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{width:min(94%,1250px);min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-family:var(--font-title);font-weight:800;letter-spacing:.08em;color:var(--orange);white-space:nowrap;text-decoration:none}
+.menu{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:5px;list-style:none}.menu a{display:block;padding:9px 11px;border-radius:8px;text-decoration:none;color:#fff;font-size:.82rem;transition:.25s}.menu a:hover,.menu a:focus{background:var(--red);outline:0}
+section{padding:100px 0;position:relative}.hero{min-height:100vh;display:grid;place-items:center;padding-top:125px}.hero-content{max-width:980px;text-align:center}
+.eyebrow{display:inline-block;color:var(--orange);border:1px solid var(--orange);padding:7px 15px;border-radius:999px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:25px;background:rgba(0,0,0,.35)}
+.hero h1{font-size:clamp(3rem,8vw,7rem);text-transform:uppercase;letter-spacing:.03em;text-shadow:0 8px 35px #000}.hero h1 span{color:var(--orange);font-family:var(--font-title)}
+.hero-subtitle{margin:25px auto;max-width:850px;font-family:var(--font-title);font-size:clamp(1.25rem,3vw,2rem)}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0}.tag{padding:10px 17px;border:1px solid rgba(207,111,10,.7);background:rgba(88,31,8,.55);border-radius:8px;font-weight:600;font-size:.85rem}
+.student{margin-top:28px;color:#ddd}.student strong{color:var(--orange)}.scroll{margin-top:40px;color:#bbb;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase}
+.section-head{margin-bottom:42px;max-width:850px}.number{color:var(--orange);font-family:var(--font-title);font-weight:800;font-size:.9rem;letter-spacing:.14em;margin-bottom:10px}.section-head h2{font-size:clamp(2.1rem,5vw,4rem);margin-bottom:18px}.section-head p{color:#d5d5d5;font-size:1.05rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.card{background:var(--glass);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 20px 50px rgba(0,0,0,.28);backdrop-filter:blur(10px)}.card h3{color:var(--orange);font-size:1.45rem;margin-bottom:15px}.card p{color:#e4e4e4;margin-bottom:15px}.card p:last-child{margin-bottom:0}
+.highlight{margin:28px 0;padding:32px;border-left:5px solid var(--orange);background:linear-gradient(90deg,rgba(155,35,5,.72),rgba(88,31,8,.5));border-radius:0 16px 16px 0}.highlight strong{display:block;font-family:var(--font-title);font-size:clamp(1.8rem,4vw,3.5rem);color:#fff;text-transform:uppercase}
+.quote{margin:28px 0;padding:28px;border:1px solid rgba(207,111,10,.55);border-radius:15px;background:rgba(0,0,0,.42);font-family:var(--font-title);font-size:1.3rem;color:#fff}.quote:before{content:"“";display:block;font-size:3rem;line-height:.7;color:var(--orange)}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.pillar{min-height:130px;padding:22px;display:grid;place-items:center;text-align:center;border:1px solid var(--line);background:rgba(0,0,0,.5);border-radius:14px;font-family:var(--font-title);font-weight:700}
+.hats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}.hat{padding:22px;border-radius:14px;background:rgba(0,0,0,.45);border:1px solid rgba(207,111,10,.35)}.hat strong{display:block;color:var(--orange);margin-bottom:7px}
+.systems{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}.system{position:relative;padding:35px 25px;text-align:center;border:1px solid var(--line);background:rgba(88,31,8,.7);border-radius:18px}.system:not(:last-child):after{content:"→";position:absolute;right:-24px;top:50%;transform:translateY(-50%);color:var(--orange);font-size:2rem;z-index:2}.system h3{color:var(--orange);font-size:1.8rem;margin-bottom:12px}
+.flow{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin-top:30px}.flow span{padding:14px 18px;background:rgba(155,35,5,.8);border-radius:10px;font-weight:600}.flow i{color:var(--orange);font-style:normal;font-size:1.4rem}
+.media-card{margin-top:24px}.media-card img,.media-card video{width:100%;display:block;border-radius:13px;border:1px solid rgba(207,111,10,.45);background:#000}.media-card img{cursor:zoom-in}audio{width:100%;margin-top:15px}.media-description{margin-top:14px;color:#ccc;font-size:.92rem}
+.materials{display:grid;gap:10px;margin-top:20px}.materials a{display:block;padding:14px 17px;background:rgba(0,0,0,.5);border:1px solid rgba(207,111,10,.35);border-radius:10px;color:#eee;text-decoration:none;word-break:break-word;transition:.25s}.materials a:hover,.materials a:focus{background:var(--red);border-color:var(--orange);outline:0}
+.conclusion{text-align:center;padding-bottom:120px}.final-quote{max-width:900px;margin:40px auto;padding:42px 30px;border-top:1px solid var(--orange);border-bottom:1px solid var(--orange);font-family:var(--font-title);font-size:clamp(1.8rem,4vw,3.3rem);font-weight:700}.final-question{max-width:950px;margin:45px auto 0;padding:35px;background:rgba(155,35,5,.72);border-radius:18px;font-family:var(--font-title);font-size:clamp(1.35rem,3vw,2.2rem)}
+footer{border-top:1px solid var(--line);background:rgba(0,0,0,.86);padding:35px 0;text-align:center;color:#bbb;font-size:.88rem}footer p+p{margin-top:6px}
+.modal{position:fixed;inset:0;z-index:2000;display:none;place-items:center;padding:25px;background:rgba(0,0,0,.9)}.modal.open{display:grid}.modal-content{position:relative;max-width:1100px;max-height:90vh}.modal-content img{display:block;max-width:100%;max-height:85vh;object-fit:contain;border:1px solid var(--orange);border-radius:12px}.close{position:absolute;top:-42px;right:0;border:0;background:transparent;color:#fff;font-size:2rem;cursor:pointer}
+@media(max-width:900px){.menu{display:none}.grid,.systems{grid-template-columns:1fr}.system:not(:last-child):after{content:"↓";right:auto;top:auto;bottom:-27px;left:50%;transform:translateX(-50%)}.pillars{grid-template-columns:repeat(2,1fr)}.hats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){section{padding:75px 0}.nav-inner{min-height:62px}.brand{font-size:.85rem}.hero{min-height:92vh}.card{padding:23px}.pillars,.hats{grid-template-columns:1fr}.flow{flex-direction:column}.flow i{transform:rotate(90deg)}.highlight{padding:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-inner">
+<a class="brand" href="#inicio">ALÉM DAS TELAS</a>
+<nav aria-label="Navegação principal"><ul class="menu">
+<li><a href="#criatividade">Criatividade</a></li><li><a href="#tecnologia">Tecnologia</a></li><li><a href="#sistemas">Sistemas</a></li><li><a href="#erro">Erro</a></li><li><a href="#colaboracao">Colaboração</a></li><li><a href="#midias">Mídias</a></li><li><a href="#conclusao">Conclusão</a></li>
+</ul></nav></div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="container hero-content">
+<span class="eyebrow">Atividade 4.2 — Apresentação de artigo sobre Criatividade</span>
+<h1>Além das <span>Telas</span></h1>
+<p class="hero-subtitle">Por que a Tecnologia sem Criatividade é Apenas "Velocidade sem Direção"</p>
+<div class="hero-tags"><span class="tag">CRIATIVIDADE</span><span class="tag">TECNOLOGIA</span><span class="tag">EDUCAÇÃO</span></div>
+<p class="student">Aluno: <strong>Dorcilio Ramos Sodre Neto</strong></p><p class="scroll">Explore a apresentação ↓</p>
+</div></section>
+
+<section id="introducao"><div class="container"><div class="section-head"><div class="number">01 — INTRODUÇÃO</div><h2>O Desafio da Educação na Era da Mudança Acelerada</h2></div>
+<div class="card"><p>O cenário educacional contemporâneo enfrenta um paradoxo: nunca tivemos tanto acesso à informação, mas o modelo tradicional, ainda ancorado na memorização e na repetição, parece cada vez mais desconectado da realidade. Vivemos em um mundo de mudanças aceleradas onde a capacidade de navegar na incerteza é a nova regra. Nesse contexto, o pensamento criativo deixa de ser um "luxo artístico" para se tornar uma ferramenta essencial de sobrevivência e inovação. A grande questão para o gestor e para o educador moderno não é mais se devemos usar a tecnologia, mas como transformá-la em um catalisador de mentes originais, evitando que as telas se tornem apenas versões digitais de velhos métodos.</p></div>
+<div class="pillars"><div class="pillar">ACESSO À<br>INFORMAÇÃO</div><div class="pillar">MUDANÇAS<br>ACELERADAS</div><div class="pillar">CRIATIVIDADE</div><div class="pillar">INOVAÇÃO</div></div></div></section>
+
+<section id="criatividade"><div class="container"><div class="section-head"><div class="number">02 — CRIATIVIDADE</div><h2>A Criatividade Não é um Dom, é uma Habilidade Treinável</h2></div>
+<div class="highlight"><strong>CRIATIVIDADE = HABILIDADE TREINÁVEL</strong></div>
+<div class="grid"><article class="card"><h3>Guilford (1967)</h3><p>Um dos pesquisadores fundamentais para a discussão apresentada, associado à compreensão do pensamento criativo como capacidade humana que pode ser estimulada.</p></article>
+<article class="card"><h3>Edward De Bono (1994)</h3><p>Apresenta ferramentas para a democratização da criatividade, incluindo a técnica dos "Seis Sombreros para Pensar". O "Sombreiro Verde" representa o esforço consciente para gerar ideias e alternativas.</p></article></div>
+<div class="card" style="margin-top:22px"><h3>Hussey (2017)</h3><div class="quote">A capacidade de criar pensamentos que resultem diferentes e inusitados, de ser originais no processo de criação de ideias, de ser mais flexíveis, com maior iniciativa e autoconfiança.</div><p>Ser criativo na escola significa cultivar a flexibilidade para ver problemas sob novos ângulos e a autoconfiança para propor soluções inusitadas.</p></div>
+<div class="hats"><div class="hat"><strong>Branco</strong>Informações e fatos.</div><div class="hat"><strong>Vermelho</strong>Emoções e sentimentos.</div><div class="hat"><strong>Preto</strong>Cautela e avaliação.</div><div class="hat"><strong>Amarelo</strong>Possibilidades e benefícios.</div><div class="hat"><strong>Verde</strong>Ideias e alternativas.</div><div class="hat"><strong>Azul</strong>Organização do pensamento.</div></div></div></section>
+
+<section id="tecnologia"><div class="container"><div class="section-head"><div class="number">03 — TECNOLOGIA</div><h2>Tecnologia sem Pedagogia: "Velocidade sem Direção"</h2></div>
+<div class="highlight"><strong>VELOCIDADE</strong><span style="display:block;font-family:var(--font-title);font-size:1.5rem;margin:7px 0">sem</span><strong style="color:var(--orange)">DIREÇÃO</strong></div>
+<div class="card"><p>A simples inserção de tablets ou inteligência artificial em sala de aula não garante, por si só, uma evolução no aprendizado. Como alertam Schalk (2005) e Jaramillo (2009), o impacto real das Novas Tecnologias de Informação e Comunicação (TICs) não reside na ferramenta, mas no seu "sentido pedagógico".</p><p>Jaramillo é enfático ao afirmar que a força da tecnologia vem de sua articulação profunda com o currículo escolar; sem isso, o dispositivo é apenas um acessório.</p><p>O risco de um uso superficial é transformar a educação em uma corrida frenética sem linha de chegada. Sem uma metodologia que sustente a inovação, a tecnologia cai no vazio.</p><div class="quote">A tecnologia "sem sustento educativo, sem orientação nem metodologia, não faz senão perder-se no mundo da rapidez sem orientação."</div><p>Portanto, o verdadeiro motor da transformação digital é a formação docente. O professor estrategista sabe que a tecnologia deve servir para enriquecer a interação entre o aluno e o conhecimento, e não apenas para acelerar tarefas mecânicas.</p></div>
+<div class="pillars"><div class="pillar">TECNOLOGIA</div><div class="pillar">PEDAGOGIA</div><div class="pillar">CURRÍCULO</div><div class="pillar">FORMAÇÃO DOCENTE</div></div></div></section>
+
+<section id="sistemas"><div class="container"><div class="section-head"><div class="number">04 — MODELO DE SISTEMAS</div><h2>O "Modelo de Sistemas": Criatividade é um Fenômeno Social</h2></div>
+<div class="card"><p>Para o psicólogo Mihaly Csikszentmihalyi, a criatividade é um fenômeno sistêmico que depende da interação entre três forças:</p></div>
+<div class="systems"><article class="system"><h3>INDIVÍDUO</h3><p>Que traz a variação e propõe a mudança.</p></article><article class="system"><h3>CAMPO</h3><p>Composto pelas instituições e especialistas, como a escola e os professores, que selecionam quais ideias são valiosas.</p></article><article class="system"><h3>DOMÍNIO</h3><p>O contexto cultural e o conhecimento acumulado que preservam as novas ideias para as gerações futuras.</p></article></div>
+<div class="card" style="margin-top:22px"><p>Essa visão transforma a sala de aula em uma "comunidade de aprendizagem". A inovação precisa de um ambiente que a valide e a preserve. Quando a escola entende seu papel como "Campo", ela deixa de apenas cobrar respostas certas e passa a atuar na curadoria de ideias que podem evoluir coletivamente.</p></div></div></section>
+
+<section id="erro"><div class="container"><div class="section-head"><div class="number">05 — ERRO E APRENDIZAGEM</div><h2>O Poder do Erro e a Necessidade de um Ambiente Seguro</h2></div>
+<div class="card"><p>Para que a criatividade floresça, o ambiente deve ser psicologicamente seguro. Pesquisas conduzidas por Moura de Carvalho et al. (2021) revelam que a "rigidez acadêmica" e o medo da falha são as principais barreiras institucionais ao pensamento divergente. A inovação exige o direito de assumir riscos.</p><p>Neste ponto, a tecnologia oferece uma vantagem estratégica: os ambientes de simulação digital. Eles permitem que estudantes testem hipóteses, falhem e recalculem rotas em um espaço controlado e sem o peso da punição tradicional. Transformar o erro em um dado de aprendizagem, e não em um estigma, é o primeiro passo para criar uma mentalidade aberta e inovadora.</p></div>
+<div class="flow"><span>EXPERIMENTAR</span><i>→</i><span>ERRAR</span><i>→</i><span>REFLETIR</span><i>→</i><span>REFORMULAR</span><i>→</i><span>APRENDER</span></div></div></section>
+
+<section id="colaboracao"><div class="container"><div class="section-head"><div class="number">06 — COLABORAÇÃO</div><h2>Colaboração Radical através das TICs</h2></div>
+<div class="card"><p>Na sociedade do conhecimento — ou na era da "Tecnotrónica", termo popularizado por Nicholas Negroponte e resgatado por Sánchez Cerón (2015) — a criatividade e as TICs formam um binômio inseparável.</p><p>A tecnologia não deve ser usada para o isolamento, mas para a colaboração radical.</p><p>Plataformas digitais e fóruns de discussão não são apenas depósitos de conteúdo; são espaços de construção social do saber. Através dessas ferramentas, o aprendizado deixa de ser um consumo passivo e se torna um processo dinâmico onde os alunos resolvem problemas em equipe, compartilhando perspectivas globais em tempo real.</p><p>A tecnologia, quando bem mediada, potencializa o "nós" em detrimento do "eu" solitário.</p></div>
+<div class="pillars"><div class="pillar">COLABORAÇÃO</div><div class="pillar">CONSTRUÇÃO<br>COLETIVA</div><div class="pillar">COMPARTILHAMENTO</div><div class="pillar">CONHECIMENTO</div></div></div></section>
+
+<section id="midias"><div class="container"><div class="section-head"><div class="number">07 — MÍDIAS</div><h2>Materiais da Atividade</h2><p>Integração de texto, imagem, áudio e vídeo na apresentação digital.</p></div>
+<div class="card media-card"><h3>Visualização das Ideias</h3><img id="infografico" src="criatividade-tecnologia-educacao.png" alt="Infográfico sobre criatividade, tecnologia e educação"><p class="media-description">Infográfico produzido como parte da atividade. Clique na imagem para ampliá-la.</p></div>
+<div class="card media-card"><h3>Ouça a Reflexão</h3><audio controls preload="metadata"><source src="criatividade-ferramentas-digitais.m4a" type="audio/mp4">Seu navegador não suporta o elemento de áudio.</audio><p class="media-description">Material em áudio produzido como parte da atividade.</p></div>
+<div class="card media-card"><h3>Assista à Produção</h3><video controls preload="metadata" playsinline><source src="tablets-nao-salvam-educacao.mp4" type="video/mp4">Seu navegador não suporta o elemento de vídeo.</video><p class="media-description">Produção audiovisual relacionada à atividade.</p></div>
+<div class="card" style="margin-top:22px"><h3>Materiais da atividade</h3><div class="materials">
+<a href="https://github.com/dorcilioneto-svg/topico4-criatividade2" target="_blank" rel="noopener noreferrer">Repositório geral</a>
+<a href="https://github.com/dorcilioneto-svg/topico4-criatividade2/blob/main/criatividade-ferramentas-digitais.m4a" target="_blank" rel="noopener noreferrer">Áudio — criatividade-ferramentas-digitais.m4a</a>
+<a href="https://github.com/dorcilioneto-svg/topico4-criatividade2/blob/main/criatividade-tecnologia-educacao.png" target="_blank" rel="noopener noreferrer">Imagem — criatividade-tecnologia-educacao.png</a>
+<a href="https://github.com/dorcilioneto-svg/topico4-criatividade2/blob/main/tablets-nao-salvam-educacao.mp4" target="_blank" rel="noopener noreferrer">Vídeo — tablets-nao-salvam-educacao.mp4</a>
+</div></div></div></section>
+
+<section id="conclusao" class="conclusion"><div class="container"><div class="section-head" style="margin:auto;text-align:center"><div class="number">08 — CONCLUSÃO</div><h2>Um Olhar para o Futuro</h2></div>
+<div class="card"><p>O futuro da educação não será escrito por máquinas, mas por humanos que saibam o que fazer com elas. A escola precisa evoluir de um centro de transmissão para um ecossistema de discussão e criação, onde a técnica esteja a serviço da imaginação.</p></div>
+<div class="final-quote">"A tecnologia nos dá a velocidade; a criatividade nos dá o destino."</div>
+<div class="final-question">"Estamos preparando nossos alunos para operar máquinas ou para pensar de formas que as máquinas jamais conseguirão?"</div></div></section>
+</main>
+
+<footer><div class="container"><p>Conteúdo gerado por IA sob supervisão de Dorcilio Ramos Sodre Neto.</p><p>Atividade 4.2 — Apresentação de artigo sobre Criatividade</p></div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><div class="modal-content"><button class="close" id="closeModal" aria-label="Fechar imagem ampliada">&times;</button><img id="modalImage" src="" alt=""></div></div>
+<script>
+const image=document.getElementById('infografico'),modal=document.getElementById('modal'),modalImage=document.getElementById('modalImage'),closeModal=document.getElementById('closeModal');
+function openImage(){modalImage.src=image.src;modalImage.alt=image.alt;modal.classList.add('open');closeModal.focus()}
+function closeImage(){modal.classList.remove('open');image.focus()}
+image.addEventListener('click',openImage);closeModal.addEventListener('click',closeImage);
+modal.addEventListener('click',e=>{if(e.target===modal)closeImage()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeImage()});
+</script>
+</body>
+</html>
